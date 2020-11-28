@@ -19,9 +19,9 @@
                 <div class="pop-up__overlay"></div>
                 <div class="pop-up__container">
                     <h2 class="pop-up__text">Редактировать профиль</h2>
-                        <form class="pop-up__form">
-                            <input type="text" class="pop-up__name" value="Имя">
-                            <input type="text" class="pop-up__self" value="О себе">
+                        <form name="form"  class="pop-up__form">
+                            <input type="text" name="name" class="pop-up__name" value="Имя">
+                            <input type="text" id="self" name="self" class="pop-up__name" value="О себе">
                             <button class="pop-up__save">Сохранить</button>
                         </form>
                     <button type="button" class="pop-up__close"></button>
@@ -40,7 +40,7 @@
                         </div>
                         <h2 class="profile-info__subtitle">Исследователь океана</h2>
                     </div>
-                    <button class="profile__button"></button>
+                    <button type="button" class="profile__button"></button>
                 </section>
 
                 <section class="elements">
@@ -97,6 +97,6 @@
                 <p class='footer__text'>&#169; 2020 Mesto Russia</p>
             </footer>
         </div>
+        <script src="script/script.js"></script>
     </body>
-    <script src="script/script.js"></script>
 </html>

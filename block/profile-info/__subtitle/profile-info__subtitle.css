@@ -21,3 +21,11 @@
         max-width: 336px;
     }
 }
+@media screen and (min-width: 950px){
+    .profile-info__subtitle{
+        max-width: 526px;
+        text-align: left;
+        display: flex;
+        justify-content: left;
+    }
+}

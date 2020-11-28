@@ -8,6 +8,7 @@
     font-weight: 400;
     color: white;
     cursor: pointer;
+    margin-top: 15px;
 }
 .pop-up__save:hover{
     opacity: 0.8;

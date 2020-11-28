@@ -5,3 +5,5 @@
 ### на этом сайте используются технологии html, css и javascript
  
 ### в дальнейшем хотел бы добавить возможность удалять и добавлять новые картинки с помощью javascript
+
+### Ссылка на GitHubPages: https://iliasafonov3.github.io/mesto/

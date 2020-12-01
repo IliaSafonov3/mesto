@@ -3,7 +3,7 @@
 }
 @media screen and (min-width: 320px){
     .header{
-        width: calc(100% - 27px*20);
+        width: calc(100% - 27px*2);
         padding-left: 27px;
         padding-right: 27px;
     }

@@ -15,18 +15,40 @@
                 <img class="header__logo" src="./image/Vector.svg" alt="Логотип Место">
             </header>
 
-            <section class="pop-up">
+            <section class="pop-up" id='pop-up-image'>
                 <div class="pop-up__overlay"></div>
-                <div class="pop-up__container">
-                    <h2 class="pop-up__text">Редактировать профиль</h2>
-                        <form name="form"  class="pop-up__form">
-                            <input type="text" name="name" class="pop-up__name" value="Имя">
-                            <input type="text" id="self" name="self" class="pop-up__name" value="О себе">
-                            <button class="pop-up__save">Сохранить</button>
-                        </form>
-                    <button type="button" class="pop-up__close"></button>
+                <div class="pop-up__image-container">
+                    <button type="button" class="pop-up__close pop-up__close_image" id='pop-up__close-Image'></button>
+                    <img src="" alt="" class="pop-up__image">
+                    <p class='pop-up__image-text'></p>
                 </div>
             </section>
+
+            <section class="pop-up" id='pop-up-profile'>
+                <div class="pop-up__overlay"></div>
+                <div class="pop-up__container" id='pop-up__container-profile'>
+                    <h2 class="pop-up__text">Редактировать профиль</h2>
+                        <form name="form"  class="pop-up__form" id='pop-up__form-profile'>
+                            <input type="text" id="name" name="name" class="pop-up__name" placeholder="Имя" >
+                            <input type="text" id="self" name="self" class="pop-up__name" placeholder="О себе">
+                            <button id="save" class="pop-up__save">Сохранить</button>
+                        </form>
+                    <button type="button" class="pop-up__close" id='pop-up__close-profile'></button>
+                </div>
+            </section>
+
+            <section class="pop-up" id='pop-up-card'>
+                <div class="pop-up__overlay"></div>
+                <div class="pop-up__container" id='pop-up__container-card'>
+                    <h2 class="pop-up__text">Новое место</h2>
+                        <form name="form"  class="pop-up__form" id='pop-up__form-card' >
+                            <input type="text" name="Card_name" id="cardName" class="pop-up__name pop-up__name_card" placeholder="Название">
+                            <input type="text" name="Image_src" id="imageSrc" class="pop-up__name pop-up__name_card" placeholder="Ссылка на картинку">
+                            <button id='cardSave' class="pop-up__save">Создать</button>
+                        </form>
+                    <button type="button" class="pop-up__close" id='pop-up__close-card'></button>
+                </div>
+            </section> 
 
             <main class="main-content">
                 <div class="line"></div>
@@ -44,53 +66,18 @@
                 </section>
 
                 <section class="elements">
-                    <div class="element">
-                        <img class="element__image" src="./image/kirill-pershin-1088404-unsplash.png" alt="Замок Карачаево-Черкесия">
-                        <div class="element__rectangle">
-                                <h3 class="element__title">Карачаево-Черкесия</h3>
+
+                    <template id='element'>
+                        <div class="element">
+                            <button class="element__trashcan" type="button"></button>
+                            <img class="element__image" src='' alt="">
+                            <div class="element__rectangle">
+                                <h3 class="element__title" ></h3>
                                 <button class="element__like" type="button"></button>
+                            </div>
                         </div>
-                    </div>
+                    </template>
 
-                    <div class="element">
-                        <img class="element__image" src="./image/эльбрус.png" alt="Гора эльбрус">
-                        <div class="element__rectangle">
-                            <h3 class="element__title" >Гора Эльбрус</h3>
-                            <button class="element__like" type="button"></button>
-                        </div>
-                    </div>
-
-                    <div class="element">
-                        <img class="element__image" src="./image/домбай.png" alt="Горы Домбая">
-                        <div class="element__rectangle">
-                            <h3 class="element__title" >Домбай</h3>
-                            <button class="element__like" type="button"></button>
-                        </div>
-                    </div>
-
-                    <div class="element">
-                        <img class="element__image" src="./image/эльбрус.png" alt="Гора эльбрус">
-                        <div class="element__rectangle">
-                            <h3 class="element__title">Гора Эльбрус</h3>
-                            <button class="element__like" type="button"></button>
-                        </div>
-                    </div>
-
-                    <div class="element">
-                        <img class="element__image" src="./image/домбай.png" alt="Горы Домбая">
-                        <div class="element__rectangle">
-                            <h3 class="element__title">Домбай</h3>
-                            <button class="element__like" type="button"></button>
-                        </div>
-                    </div>
-
-                    <div class="element">
-                        <img class="element__image" src="./image/kirill-pershin-1088404-unsplash.png" alt="Замок Карачаево-Черкесия">
-                        <div class="element__rectangle">
-                            <h3 class="element__title">Карачаево-Черкесия</h3>
-                            <button class="element__like" type="button"></button>
-                        </div>
-                    </div>
                 </section>
             </main>
             <footer class='footer'>

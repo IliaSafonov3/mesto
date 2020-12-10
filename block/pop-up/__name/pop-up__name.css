@@ -10,6 +10,7 @@
     text-align: left;
     margin-bottom: 30px;
     outline: none;
+    padding: 0px;
 }
 @media screen and (min-width: 320px){
     .pop-up__name{

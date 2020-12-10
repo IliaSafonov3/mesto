@@ -1,0 +1,12 @@
+@media screen and (min-width: 320px){
+    .pop-up__name_card{
+    width: 200px;
+    margin-bottom: 20px;
+    }
+}
+@media screen and (min-width: 980px){
+    .pop-up__name_card{
+        width: 358px;
+        margin-bottom: 30px;
+    }
+}

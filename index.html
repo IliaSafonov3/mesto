@@ -28,9 +28,11 @@
                 <div class="pop-up__overlay"></div>
                 <div class="pop-up__container" id='pop-up__container-profile'>
                     <h2 class="pop-up__text">Редактировать профиль</h2>
-                        <form name="form"  class="pop-up__form" id='pop-up__form-profile'>
-                            <input type="text" id="name" name="name" class="pop-up__name" placeholder="Имя" >
-                            <input type="text" id="self" name="self" class="pop-up__name" placeholder="О себе">
+                        <form name="form"  class="pop-up__form" id='pop-up__form-profile' novalidate>
+                            <input type="text" id="name" name="name" class="pop-up__input" placeholder="Имя" required minlength="2" maxlength="40" novalidate autocomplete="off">
+                            <span class="pop-up__error" id="name-error"></span>
+                            <input type="text" id="self" name="self" class="pop-up__input" placeholder="О себе" required minlength="2" maxlength="200" novalidate autocomplete="off">
+                            <span class="pop-up__error" id='self-error'></span>
                             <button id="save" class="pop-up__save">Сохранить</button>
                         </form>
                     <button type="button" class="pop-up__close" id='pop-up__close-profile'></button>
@@ -41,9 +43,11 @@
                 <div class="pop-up__overlay"></div>
                 <div class="pop-up__container pop-up__container_card" id='pop-up__container-card'>
                     <h2 class="pop-up__text">Новое место</h2>
-                        <form name="form"  class="pop-up__form" id='pop-up__form-card' >
-                            <input type="text" name="Card_name" id="cardName" class="pop-up__name pop-up__name_card" placeholder="Название">
-                            <input type="text" name="Image_src" id="imageSrc" class="pop-up__name pop-up__name_card" placeholder="Ссылка на картинку">
+                        <form name="form"  class="pop-up__form" id='pop-up__form-card' novalidate>
+                            <input type="text" name="Card_name" id="cardName" class="pop-up__input pop-up__input_card" placeholder="Название" minlength="2" maxlength="30" required novalidate autocomplete="off">
+                            <span class="pop-up__error pop-up__error_card" id="cardName-error"></span>
+                            <input type="url" name="Image_src" id="imageSrc" class="pop-up__input pop-up__input_card" placeholder="Ссылка на картинку" required novalidate autocomplete="off">
+                            <span class="pop-up__error pop-up__error_card" id="imageSrc-error"></span>
                             <button id='cardSave' class="pop-up__save pop-up__save_card">Создать</button>
                         </form>
                     <button type="button" class="pop-up__close pop-up__close_image" id='pop-up__close-card'></button>
@@ -84,6 +88,7 @@
                 <p class='footer__text'>&#169; 2020 Mesto Russia</p>
             </footer>
         </div>
+        <script src="script/validate.js"></script>
         <script src="script/script.js"></script>
     </body>
 </html>

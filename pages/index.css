@@ -28,8 +28,8 @@
 @import url('../block/pop-up/__close/_image/pop-up__close-image.css');
 @import url('../block/pop-up/__container/pop-up__container.css');
 @import url('../block/pop-up/__container/_card/pop-up__container_card.css');
-@import url('../block/pop-up/__name/pop-up__name.css');
-@import url('../block/pop-up/__name/_card/pop-up__name_card.css');
+@import url('../block/pop-up/__input/pop-up__input.css');
+@import url('../block/pop-up/__input/_card/pop-up__input_card.css');
 @import url('../block/pop-up/__save/pop-up__save.css');
 @import url('../block/pop-up/__save/_card/pop-up__save_card.css');
 @import url('../block/pop-up/__text/pop-up__text.css');
@@ -39,3 +39,7 @@
 @import url('../block/pop-up/__image-container/pop-up__image-container.css');
 @import url('../block/pop-up/__image-text/pop-up__image-text.css');
 @import url('../block/pop-up/__image/pop-up__image.css');
+@import url('../block/pop-up/__error/pop-up__error.css');
+@import url('../block/pop-up/__input/_invalid/pop-up__input_invalid.css');
+@import url('../block/pop-up/__save/_invalid/pop-up__save_invalid.css');
+

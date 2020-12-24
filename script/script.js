@@ -54,6 +54,8 @@ function addCard (evt) {
     addNewCard(createNewCard(newCardObject));
     closePopup(popupCard);
     formAddCard.reset();
+    const button = document.querySelector('#cardSave')
+    setButtonState(button, false, validationConfig)
 }
 
 formAddCard.addEventListener('submit', addCard);
@@ -90,11 +92,20 @@ initialCards.forEach((elem) => {
     addNewCard(createNewCard(elem));
    });
 
+function KeydownEscape (evt){
+    if (evt.key === 'Escape'){
+        closePopup(document.querySelector('.pop-up_opened'))
+        };
+}
+
 function openPopup(popup){
     popup.classList.add('pop-up_opened')
+    document.addEventListener('keydown',KeydownEscape)
+
 };
 function closePopup(popup){
     popup.classList.remove('pop-up_opened')
+    document.removeEventListener('keydown',KeydownEscape)
 };
 
 function deleteCard (card){
@@ -111,7 +122,7 @@ function fillProfilePopupForm(){
 function likeCard (el){
     el.classList.toggle('element__like_liked');
 };
-function formSubmitHandler (evt) {
+function handleProfileSubmi (evt) {
     evt.preventDefault();
     closePopup(popupProfile);
 
@@ -119,24 +130,6 @@ function formSubmitHandler (evt) {
     job.textContent = jobInput.value;
 }
 
-
-function checkPopup (popup){
-    if(popup.classList.contains('pop-up_opened'))
-    return true
-}
-
-
-function CheckaAndClosePopup (evt,popup){
-    if((checkPopup(popup)) && (evt.key === 'Escape')){
-    closePopup(popup)
-    };
-};
-
-function addEventListenerToEscape(popup){
-    document.addEventListener('keydown', function(evt){
-        CheckaAndClosePopup(evt,popup)   
-    })
-};
 
 function addEventListenerToCloseButton(popup,button){
     button.addEventListener('click',function(){
@@ -154,7 +147,6 @@ function addAllcloseFunctionToPopup(popups){
         const button = popup.querySelector('.pop-up__close');
         const overlay = popup.querySelector('.pop-up__overlay');
 
-        addEventListenerToEscape(popup);
         addEventListenerToCloseButton(popup,button);
         addEventListenerToOverlay(popup,overlay);
     })
@@ -166,6 +158,7 @@ addAllcloseFunctionToPopup(popupList)
 
 addCardButton.addEventListener('click',function(){
     openPopup(popupCard);
+    
 });
 popupButton.addEventListener('click',function (){
     openPopup(popupProfile);
@@ -175,7 +168,7 @@ popupButton.addEventListener('click',function (){
 
 
 
-formElement.addEventListener('submit', formSubmitHandler);
+formElement.addEventListener('submit', handleProfileSubmi);
 
 
 

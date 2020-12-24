@@ -13,9 +13,6 @@ const inputName = formAdd.querySelector('#name')
 const inputList = formAdd.querySelectorAll('.pop-up__input');
 const submitButton = formAdd.querySelector('.pop-up__save');
 
-formAdd.addEventListener('submit', (evt) =>{
-    evt.preventDefault();
-});
 
 function showError (form, input,config){
     const error = form.querySelector(`#${input.id}-error`);
@@ -73,6 +70,8 @@ function enableValidation(config){
     });
 
 }
+
+
 
 enableValidation(validationConfig)
 

@@ -1,4 +1,4 @@
-import {closePopup} from './script.js'
+import {closePopup,openPopup,popupImage,popupImageText,popupImageSource} from './script.js'
 
 export class Card {
     constructor(data,cardSelector){
@@ -30,11 +30,10 @@ export class Card {
             closePopup(document.querySelector('.pop-up_opened'))
             }}
     _openPopup(){
-        document.querySelector('#pop-up-image').classList.add('pop-up_opened')
-        document.addEventListener('keydown',this._keydownEscape )
+        openPopup(popupImage)
         
-        document.querySelector('.pop-up__image').src = this._link;
-        document.querySelector('.pop-up__image-text').textContent = this._name;
+        popupImageSource.src = this._link;
+        popupImageText.textContent = this._name;
     }
 
     _setEventListener(){

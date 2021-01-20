@@ -16,7 +16,9 @@ const formAddCard = document.querySelector('#pop-up__form-card');
 const linkValue = document.querySelector('#imageSrc');
 const cardNameValue = document.querySelector('#cardName');
 const popupList = document.querySelectorAll('.pop-up');
-
+export const popupImageSource = document.querySelector('.pop-up__image');
+export const popupImageText = document.querySelector('.pop-up__image-text');
+export const popupImage = document.querySelector('#pop-up-image')
 
 const profileValidator = new FormValidator(validationConfig, '#pop-up__form-profile')
 profileValidator.enableValidation()
@@ -54,7 +56,8 @@ function keydownEscape (evt){
         };
 }
 
-function openPopup(popup){
+
+export function openPopup(popup){
     popup.classList.add('pop-up_opened')
     document.addEventListener('keydown',keydownEscape)
 

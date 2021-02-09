@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Илья Сафонов">
-    <link rel="stylesheet" href="./pages/index.css">
     <meta name='description' content='Страница пользователя, с его фотограиями'>
     <meta name='keywords' content='Фотографии'>
     <title>Место</title>
@@ -29,9 +28,9 @@
                 <div class="pop-up__container" id='pop-up__container-profile'>
                     <h2 class="pop-up__text">Редактировать профиль</h2>
                         <form name="form"  class="pop-up__form" id='pop-up__form-profile' novalidate>
-                            <input type="text" id="name" name="name" class="pop-up__input" placeholder="Имя" required minlength="2" maxlength="40" novalidate autocomplete="off">
+                            <input type="text" id="name" name="name" class="pop-up__input pop-up__name " placeholder="Имя" required minlength="2" maxlength="40" novalidate autocomplete="off">
                             <span class="pop-up__error" id="name-error"></span>
-                            <input type="text" id="self" name="self" class="pop-up__input" placeholder="О себе" required minlength="2" maxlength="200" novalidate autocomplete="off">
+                            <input type="text" id="self" name="self" class="pop-up__input pop-up__self" placeholder="О себе" required minlength="2" maxlength="200" novalidate autocomplete="off">
                             <span class="pop-up__error" id='self-error'></span>
                             <button id="save" class="pop-up__save">Сохранить</button>
                         </form>
@@ -44,9 +43,9 @@
                 <div class="pop-up__container pop-up__container_card" id='pop-up__container-card'>
                     <h2 class="pop-up__text">Новое место</h2>
                         <form name="form"  class="pop-up__form" id='pop-up__form-card' novalidate>
-                            <input type="text" name="Card_name" id="cardName" class="pop-up__input pop-up__input_card" placeholder="Название" minlength="2" maxlength="30" required novalidate autocomplete="off">
+                            <input type="text" name="Card_name" id="cardName" class="pop-up__input pop-up__input_card pop-up__name" placeholder="Название" minlength="2" maxlength="30" required novalidate autocomplete="off">
                             <span class="pop-up__error pop-up__error_card" id="cardName-error"></span>
-                            <input type="url" name="Image_src" id="imageSrc" class="pop-up__input pop-up__input_card" placeholder="Ссылка на картинку" required novalidate autocomplete="off">
+                            <input type="url" name="Image_src" id="imageSrc" class="pop-up__input pop-up__input_card pop-up__self" placeholder="Ссылка на картинку" required novalidate autocomplete="off">
                             <span class="pop-up__error pop-up__error_card" id="imageSrc-error"></span>
                             <button id='cardSave' class="pop-up__save pop-up__save_card">Создать</button>
                         </form>
@@ -88,9 +87,5 @@
                 <p class='footer__text'>&#169; 2020 Mesto Russia</p>
             </footer>
         </div>
-        <script src="script/formValidator.js" type="module"></script>
-        <script src="script/script.js" type="module"></script>
-        <script src="script/card.js" type="module"></script>
-        <script src="script/data.js" type="module"></script>
     </body>
 </html>

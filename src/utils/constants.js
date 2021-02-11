@@ -1,3 +1,7 @@
+export const main = document.querySelector(".main-content");
+export const popupButton = main.querySelector(".profile-info__button");
+export const addCardButton = document.querySelector(".profile__button");
+
 export const validationConfig = {
   formSelector: ".pop-up__form",
   inputSelector: ".pop-up__input",

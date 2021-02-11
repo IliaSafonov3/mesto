@@ -1,14 +1,38 @@
-import { Card } from "./card.js";
-import { FormValidator } from "./formValidator.js";
-import { validationConfig, initialCards } from "./data.js";
-import { PopupWithImage } from "./PoupWithImage.js";
-import { PopupWithForm } from "./PopupWithForm.js";
-import { UserInfo } from "./UserInfo.js";
-import { Section } from "./section.js";
+import { Card } from "../components/card.js";
+import { FormValidator } from "../components/formValidator.js";
+import { validationConfig, initialCards,main ,popupButton,addCardButton } from "../utils/constants.js";
+import { PopupWithImage } from "../components/PoupWithImage.js";
+import { PopupWithForm } from "../components/PopupWithForm.js";
+import { UserInfo } from "../components/UserInfo.js";
+import { Section } from "../components/section.js";
 
-const main = document.querySelector(".main-content");
-const popupButton = main.querySelector(".profile-info__button");
-const addCardButton = document.querySelector(".profile__button");
+import plus from "../image/plus.svg"
+import CloseIcon from "../image/CloseIcon.svg"
+import jalIvKusto from "../image/jalIvKusto.png"
+import like from "../image/like.svg"
+import liked from "../image/liked.svg"
+import rubish from "../image/rubish.svg"
+import buttonbig from "../image/buttonbig.svg"
+import Vector from "../image/Vector.svg"
+import infoButton from "../image/infoButton.svg"
+
+
+
+
+import "./index.css"
+
+const whoIsTheGoat = [
+    { name: 'CloseIcon', image: CloseIcon },
+    { name: 'jalIvKusto', link : jalIvKusto },
+    { name: 'Vector', link: Vector },
+    { name: 'liked', link: liked },
+    { name: 'like', link: like }, 
+    { name: 'buttonbig', link: buttonbig },
+    { name: 'plus', link: plus },
+    { name: 'rubish', link: rubish },
+    { name: 'infoButton', link: infoButton }
+];
+
 export const popupImageSource = document.querySelector(".pop-up__image");
 export const popupImageText = document.querySelector(".pop-up__image-text");
 export const popupImage = document.querySelector("#pop-up-image");
@@ -84,7 +108,4 @@ const newCardValidator = new FormValidator(
 );
 newCardValidator.enableValidation();
 
-export function closePopup(popup) {
-  popup.classList.remove("pop-up_opened");
-  document.removeEventListener("keydown", keydownEscape);
-}
+ 

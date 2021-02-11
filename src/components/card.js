@@ -1,4 +1,3 @@
-import { closePopup } from "./script.js";
 
 export class Card {
   constructor({ data, handleCardClick, cardSelector }) {
@@ -25,11 +24,6 @@ export class Card {
 
     return this._element;
   }
-  _keydownEscape = (evt) => {
-    if (evt.key === "Escape") {
-      closePopup(document.querySelector(".pop-up_opened"));
-    }
-  };
 
   _setEventListener() {
     this._element
@@ -49,13 +43,13 @@ export class Card {
       });
   }
 
-  _likeCard = () => {
+  _likeCard () {
     this._element
       .querySelector(".element__like")
       .classList.toggle("element__like_liked");
   };
 
-  _deleteCard = () => {
+  _deleteCard (){
     this._element.remove();
   };
 }

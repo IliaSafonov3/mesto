@@ -5,6 +5,8 @@ export class Card {
     this._link = data.link;
     this._cardSelector = cardSelector;
     this._handleCardClick = handleCardClick;
+    this._element = this._getTemplate();
+    this._elementImage = this._element.querySelector(".element__image");
   }
 
   _getTemplate() {
@@ -16,10 +18,10 @@ export class Card {
   }
 
   generateCard() {
-    this._element = this._getTemplate();
     this._setEventListener();
 
-    this._element.querySelector(".element__image").src = this._link;
+    this._elementImage.src = this._link;
+    this._elementImage.alt = this._name;
     this._element.querySelector(".element__title").textContent = this._name;
 
     return this._element;
@@ -36,8 +38,7 @@ export class Card {
       .addEventListener("click", () => {
         this._deleteCard();
       });
-    this._element
-      .querySelector(".element__image")
+      this._elementImage
       .addEventListener("click", () => {
         this._handleCardClick();
       });

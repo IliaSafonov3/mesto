@@ -1,10 +1,10 @@
 import { Card } from "../components/Сard.js";
-import { FormValidator } from "../components/FormValidator.js";
+import { FormValidator } from "../components/mValidator.js";
 import { jobInput, nameInput, validationConfig, initialCards,popupButton,addCardButton } from "../utils/constants.js";
 import { PopupWithImage } from "../components/PoupWithImage.js";
 import { PopupWithForm } from "../components/PopupWithForm.js";
 import { UserInfo } from "../components/UserInfo.js";
-import { Section } from "../components/Section.js";
+import { Section } from "../components/ction.js";
 
 import plus from "../image/plus.svg"
 import CloseIcon from "../image/CloseIcon.svg"

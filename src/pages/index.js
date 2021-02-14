@@ -1,6 +1,6 @@
 import { Card } from "../components/Сard.js";
 import { FormValidator } from "../components/FormValidator.js";
-import { createCard, jobInput, nameInput, validationConfig, initialCards,popupButton,addCardButton } from "../utils/constants.js";
+import { jobInput, nameInput, validationConfig, initialCards,popupButton,addCardButton } from "../utils/constants.js";
 import { PopupWithImage } from "../components/PoupWithImage.js";
 import { PopupWithForm } from "../components/PopupWithForm.js";
 import { UserInfo } from "../components/UserInfo.js";

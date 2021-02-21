@@ -36,11 +36,11 @@ export class FormValidator {
       this._submitButton.disabled = true;
     }
   }
-  _settEventListner() {
+  _setEventListner() {
     this._inputList.forEach((input) => {
       input.addEventListener("input", (evt) => {
         this._checkInputValidity( input);
-        this._setButtonState( );
+        this._setButtonState();
       });
     });
   }
@@ -52,7 +52,7 @@ export class FormValidator {
     this._setButtonState();
   }
   enableValidation() {
-    this._settEventListner(this._form);
+    this._setEventListner(this._form);
     this._form.addEventListener("submit", (evt) => {
       evt.preventDefault();
     });

@@ -1,5 +1,5 @@
 
-.profile__button_avatar{
+.profile__button-avatar{
     position: absolute;
     background-image: url('../../../../image/VectorinfoButtonBig.svg');
     opacity: 0;
@@ -13,11 +13,11 @@
     background-repeat: no-repeat;
     z-index: 5;
 }
-.profile__button_avatar:hover{
+.profile__button-avatar:hover{
     opacity: 1;
 }
 @media screen and (max-width: 979px){
-    .profile__button_avatar{
+    .profile__button-avatar{
         left: calc(50% - 60px);
     }
 }

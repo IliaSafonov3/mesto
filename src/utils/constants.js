@@ -5,7 +5,7 @@ export const nameInput = document.querySelector("#name");
 export const jobInput = document.querySelector("#self");
 export const avatarImage = document.querySelector(".profile__avatar");
 export const avatarButton = document.querySelector(
-  ".profile-info__button_avatar"
+  ".profile__button_avatar"
 );
 export const cardList = document.querySelector(".elements");
 export const validationConfig = {

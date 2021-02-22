@@ -11,15 +11,14 @@ export class Card {
     this._cardSelector = cardSelector;
     this._handleCardClick = handleCardClick;
     this._element = this._getTemplate();
+    this._elementId = this._element.querySelector('.element__id')
     this._elementImage = this._element.querySelector(".element__image");
     this._trashcan = this._element.querySelector(".element__trashcan");
   }
-  addLike() {
-    this._quantity = this._quantity + 1;
+  setLikeQuantity(obj) {
+    this._quantity = obj.likes.length;
   }
-  dleteLike() {
-    this._quantity = this._quantity - 1;
-  }
+  
   checkLike() {
     return this._element
       .querySelector(".element__like")
@@ -47,6 +46,7 @@ export class Card {
     this._element.querySelector(
       ".element__like-quantity"
     ).textContent = this._quantity;
+    this._elementId.textContent = this._id
     this._elementImage.src = this._link;
     this._elementImage.alt = this._name;
     this._element.querySelector(".element__title").textContent = this._name;

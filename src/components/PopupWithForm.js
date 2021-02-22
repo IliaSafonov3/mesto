@@ -15,6 +15,10 @@ export class PopupWithForm extends Popup {
     });
     return this._inputValues;
   }
+  setSubmitAction(handleSubmit){
+    this._handleSubmit = handleSubmit;
+  }
+
   close() {
     super.close();
     this._form.reset();
@@ -36,3 +40,7 @@ export class PopupWithForm extends Popup {
     });
   }
 }
+
+
+
+

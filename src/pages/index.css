@@ -16,6 +16,7 @@
 @import url('../block/profile-info/__name/profile-info__name.css');
 @import url('../block/elements/elements.css');
 @import url('../block/element/element.css');
+@import url('../block/element/__id/element__id.css');
 @import url('../block/element/__image/element__image.css');
 @import url('../block/element/__like/element__like.css');
 @import url('../block/element/__like-container/element__like_container.css');

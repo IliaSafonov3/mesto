@@ -14,7 +14,7 @@ export class Api {
   }
   _handleResponseError(err) {
     console.log("_handleResponseError");
-    return Promise.reject(err.mesage);
+    return console.log(err);
   }
 
   addLike(cardId) {

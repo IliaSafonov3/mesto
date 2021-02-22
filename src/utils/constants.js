@@ -16,3 +16,4 @@ export const validationConfig = {
   inputErrorClass: "pop-up__input_invalid",
   errorClass: "popup__error_visible",
 };
+ 
